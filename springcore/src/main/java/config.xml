@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd
+    
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <context:component-scan base-package="com.springcore.springcore"/>
+    <context:annotation-config></context:annotation-config>
+    
+    <bean class="com.springcore.springcore.Student" name="student1">
+    <property name="studentId">
+    <value>67</value>
+    </property>
+    
+    <property name="studentName">
+    <value>Prachi Patel</value>
+    </property>
+    
+    <property name="studentAddress">
+    <value>Odisha</value>
+    </property>
+    
+    
+    </bean>
+    
+    <bean class="com.springcore.springcore.Student" name="student2">
+    <property name="studentId" value="68"/>
+    
+    <property name="studentName" value="John Doe"/>
+ 
+    <property name="studentAddress" value="Odisha"/>
+   
+    </bean>
+    
+    <bean class="com.springcore.springcore.Emp" name="emp1">
+    <property name="name" value="Prachi"/>
+    
+    <property name="phones">
+    <list>
+    <value>456566</value>
+    <value>324534</value>
+    <value>353456</value>
+    </list>
+    </property>
+    
+    <property name="addresses">
+    <set>
+    <value>Delhi</value>
+    <value>Lucknow</value>
+    <value>Mumbai</value>
+    </set>
+    </property>
+    
+    <property name="courses">
+    <map>
+    <entry key="Java" value="2 month"/>
+    <entry key="Python" value="1 month"/>
+    <entry key="C++" value ="3 month"/>
+    
+    </map>
+    </property>
+    
+    <property name="props">
+    <props>
+    <prop key="name">Prachi</prop>
+    <prop key="channelName">Learn Code </prop>
+    </props>
+    
+    </property>
+    
+    </bean>
+    
+    
+    <bean class="com.springcore.springcore.B" name="bref">
+    <property name="y" value="67"/>
+    </bean>
+    
+    <bean class="com.springcore.springcore.A" name="aref">
+    <property name="x" value="76"/>
+    <property name="ob" >
+    <ref bean="bref"/>
+    </property>
+    </bean>
+    
+    <bean class="com.springcore.springcore.Certi" name="cer">
+    <constructor-arg value="Android using Kotlin"/>
+    </bean>
+    <bean class="com.springcore.springcore.Person" name="person">
+    <constructor-arg value="Prachi"/>
+    <constructor-arg value="67"/>
+    <constructor-arg ref="cer"/>
+    </bean>
+   <!--   
+   <bean class="com.springcore.springcore.Food" name="f1" init-method="init" destroy-method="destroy">
+   <property name="price" value="10"/>
+   </bean>
+    
+  <bean class="com.springcore.springcore.Pepsi" name="p1">
+  <property name="price" value="5"/>
+  </bean>  
+    
+  <bean class="com.springcore.springcore.Example" name="example">
+  <property name="subject" value="English"/>
+  </bean> -->
+  
+  <bean class="com.springcore.springcore.Address" name="address">
+  <property name="street" value="Temp Street"/>
+  <property name="city" value="Delhi"/>
+  </bean>
+  
+  <!--  <bean class="com.springcore.springcore.Employee" name="emp2"> autowire="byName"
+ 
+  </bean> -->
+    
+    
+    
+    
+    
+    
+</beans>
