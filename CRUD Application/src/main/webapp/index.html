@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width , initial-scale=1">
+<!--<title>Insert title here</title>-->
+<style>
+body{
+	font-family:Arial,Helvetica,sans-serif;
+	background-color:black;
+}
+*{
+box-sizing:border-box;
+}
+.container{
+padding:16px;
+background-color:white;
+}
+
+input[type=text],input[type=password]{
+width:100%;
+padding:15px;
+margin:5px 0 22px 0;
+display:inline:block;
+border:none;
+background:#f1f1f1;
+}
+input[type=text]:focus,input[type=password]:focus{
+background-color:#ddd;
+outline:none;
+}
+
+hr{
+border:1px solid #f1f1f1;
+margin-bottom:25px;
+}
+
+.registerbtn{
+background-color:blue;
+color:white;
+padding:16px 20px;
+margin:8px 0;
+border:none;
+cursor:pointer;
+width:100%;
+opacity:0.9;
+}
+
+.registerbtn-hover{
+opacity:1;
+}
+
+a{
+color:dodgerblue;
+}
+
+.signin{
+background-color:#f1f1f1;
+text-align:center;
+}
+</style>
+</head>
+<body>
+<a href="ShowDetails">View Employees</a>
+
+<form action="SaveDetailsSer" method="POST">
+<div class="container">
+<h1 class="registerbtn">Register</h1>
+<p>Please Fill This Form To Create An Account</p>
+<hr>
+<label for="fname"><b>Full Name</b></label>
+<input type="text" placeholder="Enter Your Name" name="name" required>
+
+<label for="email"><b>Email</b></label>
+<input type="text" placeholder="Enter Your Email" name="email" required>
+
+<label for="psw"><b>Password</b></label>
+<input type="password" placeholder="Enter Your Password" name="password" required>
+
+<label for="addr"><b>Address</b></label>
+<input type="text" placeholder="Enter Your Address" name="address" required>
+
+<label class="label">City</label>
+<select name="city">
+<option disabled="disabled" selected="selected">Choose Option</option>
+<option>Mumbai</option>
+<option>Delhi</option>
+<option>Bangalore</option>
+<option>Ahmedabad</option>
+<option>Indore</option>
+</select>
+<br><br>
+<label class="label">Country</label>
+<select name="country">
+<option disabled="disabled" selected="selected">Choose Option</option>
+<option>India</option>
+<option>USA</option>
+<option>France</option>
+<option>Russia</option>
+<option>China</option>
+</select>
+<hr>
+
+<button type="submit" class="registerbtn">Register</button>
+
+</div>
+
+<!-- <div class="container signin"> 
+<p>Already Have An Account? <a href="">Sign in</a></p>
+</div>--->
+</form>
+</body>
+</html>

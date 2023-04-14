@@ -1,0 +1,122 @@
+@charset "ISO-8859-1";
+$color:#000;
+$color-bg:#c0c0c0;
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://myeyerweb.com/eric/tools/css/reset/reset.css);
+
+
+[class*="fontawesome-1"]:before{}
+font-family:"FontAwesome",sans-serif;	
+
+*{
+box-sizing: inherit	
+}
+
+html{
+	box-sizing:border-box;
+	height:100%;
+	
+}
+
+body{
+	background:$color-bg;	
+	color:$color;
+	font-fqamily:'Varela Round',sans-serif;
+	line-height:1.5;
+	margin:0;
+	min-height:100%;
+}
+
+input{
+	background-image:none;
+	border:none;
+	font:inherit;
+	margin:0;
+	padding:0;
+    transition:all.3s;
+}
+
+.align{
+	align-items:center;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+.grid{
+	margin-left:auto;
+	margin-right:auto;
+	max-width:90%;
+	width:600px;
+}
+
+#login h2{
+	background:#f95252;
+	border-radius:20px 20px 0 0;
+	color:	#fff;
+	font-size:28px;
+	padding:20px 26px;	
+}
+
+#login h2 span[class*="fontawesome-"]{
+	margin-right:14px;
+	
+}
+
+#login fieldset{
+	background:	#fff;
+	border-radius:0 0 20px 20px;
+	padding:20px 26px;
+}
+
+#login fieldset p:last-child{
+	margin-bottom:0;	
+}
+
+#login fieldset input{
+	border-radius:3px;
+}
+
+#login fieldset input[type="email"],#login fieldset input[type="password"]{
+	 background:#eee;
+	 color:#777;
+	 padding:4px 10px;
+	 width:100%;
+}
+
+#login fieldset input[type="submit"]{
+	background:#33cc77;
+	color:#fff;
+	display:block;
+	margin:0 auto;
+	padding:4px 0;
+	width:100px;
+}
+
+#login fieldset input[type="submit"]:hover{
+	background:#28ad63;
+}
+
+#customers{
+	font-family:"Trechubet MS",Arial,Helvetica,sans-serif;
+	border-collapse:collapse;
+	width:100%;	
+}
+
+#customers td,#customers th{
+	border:1px solid #ddd;
+		padding:8px;
+}
+
+#customers tr:nth-child(even){background-color:#f2f2f2; }
+
+#customers tr:hover{background-color:#ddd;}
+
+#customers th{
+	padding-top:12px;
+	padding-bottom:12px;
+	text-align:left;
+	background-color:orange;
+	color:white;
+	
+}
